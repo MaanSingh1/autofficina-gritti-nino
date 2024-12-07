@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <meta name="description" content="Autofficina Gritti Nino - Revisione, manutenzione, diagnosi elettronica, gommista, climatizzazione a Cologno Al Serio (BG)"/>
+    <title>Autofficina Gritti Nino</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Puoi scegliere il font che preferisci, ad esempio: -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="top-bar">
+            <div class="logo">
+                <a href="#header">Autofficina Gritti Nino</a>
+            </div>
+            <div class="contacts">
+                <a href="tel:3472930537">Tel: 347 2930537</a> | 
+                <a href="mailto:gritti66@libero.it">gritti66@libero.it</a> 
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle">
+                <!-- Icona hamburger -->
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#dove-siamo">Dove Siamo</a></li>
+                <li><a href="#prenota">Prenota Ora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO / INTRO SECTION -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Autofficina Gritti Nino</h1>
+            <p>Professionalità, Esperienza e Passione per la tua Auto</p>
+            <a class="btn" href="#prenota">Prenota un Appuntamento</a>
+        </div>
+    </section>
+
+    <!-- CHI SIAMO -->
+    <section id="chi-siamo" class="section">
+        <div class="container">
+            <h2>Chi Siamo</h2>
+            <p>Fondata negli anni '90, l'Autofficina Gritti Nino a Cologno Al Serio (BG) è da sempre un punto di riferimento per gli automobilisti della zona. La nostra officina vanta una tradizione familiare e un team di professionisti altamente qualificati, in grado di garantire interventi rapidi, sicuri e svolti con cura artigianale.</p>
+            <p>Il nostro approccio si basa sulla trasparenza e sulla competenza: forniamo assistenza a 360°, dalla manutenzione ordinaria alle revisioni periodiche, dalla diagnosi elettronica ai servizi di gommista e climatizzazione. La fiducia dei nostri clienti è il nostro miglior biglietto da visita.</p>
+        </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section id="servizi" class="section services">
+        <div class="container">
+            <h2>I Nostri Servizi</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="images/revisione-icon.png" alt="Revisione Periodica" />
+                    <h3>Revisione periodica</h3>
+                    <p>Controlli completi e certificati per garantire la massima sicurezza su strada.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/manutenzione-icon.png" alt="Manutenzione" />
+                    <h3>Manutenzione ordinaria e straordinaria</h3>
+                    <p>Interventi regolari o straordinari per mantenere la tua auto sempre al top.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/diagnosi-icon.png" alt="Diagnostica Elettronica" />
+                    <h3>Diagnostica elettronica</h3>
+                    <p>Strumentazione all’avanguardia per identificare e risolvere ogni problema.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/gommista-icon.png" alt="Gommista" />
+                    <h3>Servizio gommista</h3>
+                    <p>Cambio gomme, equilibratura e convergenza per una guida sicura.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/clima-icon.png" alt="Climatizzazione" />
+                    <h3>Impianti di climatizzazione</h3>
+                    <p>Installazione, controllo e ricarica dell'aria condizionata per un comfort ottimale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOVE SIAMO -->
+    <section id="dove-siamo" class="section">
+        <div class="container">
+            <h2>Dove Siamo</h2>
+            <p>Ci trovi in Via Roncalli 1/A, Cologno Al Serio (BG)</p>
+            <div class="map-container">
+                <!-- Integrazione Google Maps -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.473518262526!2d9.721250076319514!3d45.57896593514347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47814ea0554a7d3d%3A0x44ab69dd055bb86a!2sVia%20Giovanni%20XXIII%2C%201%2C%2024022%20Alzano%20Lombardo%20BG!5e0!3m2!1sit!2sit!4v1694281927159!5m2!1sit!2sit" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRENOTA ORA -->
+    <section id="prenota" class="section booking">
+        <div class="container">
+            <h2>Prenota un Appuntamento</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="nome">Nome e Cognome</label>
+                    <input type="text" id="nome" name="nome" required />
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="data">Data Preferita</label>
+                    <input type="date" id="data" name="data" required />
+                </div>
+                <div class="form-group">
+                    <label for="messaggio">Messaggio / Richieste</label>
+                    <textarea id="messaggio" name="messaggio"></textarea>
+                </div>
+                <button type="submit" class="btn">Invia Richiesta</button>
+            </form>
+            <p class="info-prenota">Ti ricontatteremo per confermare l'appuntamento.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><strong>Autofficina Gritti Nino</strong></p>
+                <p>Via Roncalli 1/A, Cologno Al Serio (BG)</p>
+                <p>Tel: 347 2930537 | Email: <a href="mailto:gritti66@libero.it">gritti66@libero.it</a></p>
+                <p>P. IVA: 02452080167</p>
+            </div>
+            <div class="footer-credits">
+                <p>© 2024 Autofficina Gritti Nino</p>
+                <p><a href="https://man-preet-singh.com/" target="_blank">creato da Manpreet Singh</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
