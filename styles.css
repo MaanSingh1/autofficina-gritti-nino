@@ -1,54 +1,281 @@
-/* ... (other CSS rules as before) ... */
+:root {
+    --primary-color: #212529; 
+    --secondary-color: #ffc107; 
+    --light-bg: #f8f9fa; 
+    --dark-text: #343a40; 
+    --light-text: #f8f9fa;
+    --max-width: 1200px;
+    --transition: 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
 
-/* HEADER (Mobile Version) */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+/* HEADER */
+#header { /* Default header styles (for larger screens) */
+    background: var(--light-bg);
+    color: var(--dark-text);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#header li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+/* NAVIGATION */
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav li {
+    margin: 0.8rem 0;
+}
+
+#nav a {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+#nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+
+/* OTHER SECTIONS */
+
+.section {
+    padding: 4rem 2rem;
+    text-align: center; 
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#chi-siamo p, #servizi p, #dove-siamo p {  
+    margin-bottom: 1rem;
+}
+
+/* SERVICES SECTION */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; 
+}
+
+.service-item {
+    text-align: center; 
+    padding: 2rem; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-item h3 {
+    color: var(--primary-color);
+}
+
+.service-item i {  
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    color: #555; 
+}
+
+/* CONTACT INFO */
+.contact-info p {
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+}
+
+/* HERO SECTION */
+#hero {
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-text);
+    position: relative; /* Needed for the overlay to position correctly */
+    padding: 2rem;
+
+}
+
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1; /* Behind content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* In front of overlay */
+}
+
+.opening-hours { /*  Orario text */
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: inline-block; /* To make it a block element */
+    margin-top: 1.5rem; /* Adds margin above the button */
+
+}
+
+.btn:hover {
+    background: #e0a800;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
+#footer {
+    background: var(--primary-color);
+    color: var(--light-text);
+    padding: 3rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+}
+
+.footer-credits a {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* DOVE SIAMO (MAP) */
+.map-container {
+    margin-top: 2.5rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%; /* Make map responsive */
+    height: 450px; /* Fixed height for consistent display */
+    margin: 0 auto; /* Center the map horizontally */
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
 @media screen and (max-width: 768px) {
+    /* Mobile Menu Styles */
     #header {
-        background: transparent; /* Hide the header background on mobile */
-        box-shadow: none; /* Remove the header shadow on mobile */
-        padding: 1rem;  /* Make sure the toggle has space around it */
-
+        background: transparent;
+        box-shadow: none;
+        padding: 1rem;
+        position: relative;
+        z-index: 1001;
     }
 
-    .top-bar {
-        display: none; /* Hide the top bar on mobile */
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1003;
     }
 
     #nav {
         position: absolute;
         top: 0;
         right: 0;
-        width: 100%; /* Adjust width as needed */
+        width: 100%;
         background: var(--primary-color);
         text-align: center;
-        z-index: 1001; /* Make sure it's on top of the hero image */
-        transform: translateY(-100%); /* Hide the menu initially */
+        z-index: 1002; 
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
-    }
-    .top-contacts{
-        display: none;
     }
     #nav.show {
         transform: translateY(0);
     }
+    .top-contacts{
+        display: none;
+    }
     #nav ul {
         flex-direction: column;
         padding: 1rem 0;
-
     }
     #nav li {
         margin: 0.5rem 0;
-    }
-
-    .menu-toggle {
-        display: flex; /* Show the hamburger menu on mobile */
-        position: absolute; /* Position the toggle relative to viewport */
-        top: 20px;
-        right: 20px;
-        z-index: 1002; /* Ensure it stays on top of other elements */
-    }
-
-    .menu-toggle .bar {
-        /* ... existing styles for bars ... */
     }
 
     .opening-hours{
@@ -59,17 +286,37 @@
     }
     .hero-content h1 {
         font-size: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 0; /* Reduced margin to avoid extra space on mobile */
     }
 
     .hero-content p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+    }
+    .top-bar {
+        display: none; /* Hide top bar on mobile */
+    }
+    /* ... other mobile styles for hero, sections, etc. ... */
 
+    .form-message {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;  /* Stack footer content vertically */
+        align-items: center;      /* Center footer content */
+    }
+
+    .map-container {
+        padding: 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
 
     .contact-info {
-        display: grid; /* For easy alignment and responsive layout */
+        display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -77,21 +324,7 @@
     .contact-info p {
         margin: 0;
         font-size: 1.1rem;
-        text-align: left; /* Align text to the left */
+        text-align: left;
     }
-}
 
-/* Other CSS rules for larger screens ... */
-
-/* New Class for Contact Info Styling */
-.contact-info {
-    margin-top: 2rem;
-}
-
-.contact-info i {
-    margin-right: 0.5rem;
-}
-
-.form-message{
-    display: none;
 }
