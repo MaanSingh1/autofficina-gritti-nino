@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Form submit (fittizio)
-    const bookingForm = document.getElementById('booking-form');
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert("Richiesta inviata! Ti contatteremo a breve per confermare l'appuntamento.");
-        bookingForm.reset();
-    });
+    // Form submit (fittizio) - REMOVED SUBMIT FUNCTIONALITY
+    // const bookingForm = document.getElementById('booking-form');
+    // bookingForm.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     alert("Richiesta inviata! Ti contatteremo a breve per confermare l'appuntamento.");
+    //     bookingForm.reset();
+    // });
 });
