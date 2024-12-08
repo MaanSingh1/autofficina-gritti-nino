@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #212529; 
-    --secondary-color: #ffc107; 
-    --light-bg: #f8f9fa; 
-    --dark-text: #343a40; 
+    --primary-color: #212529;
+    --secondary-color: #ffc107;
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
     --light-text: #f8f9fa;
     --max-width: 1200px;
     --transition: 0.3s ease;
@@ -32,13 +32,19 @@ a {
 }
 
 /* HEADER */
-#header { /* Default header styles (for larger screens) */
+#header {
     background: var(--light-bg);
     color: var(--dark-text);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensure header stays above other content */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Consistent padding */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+
+}
+#header.scrolled{
+    background-color: rgba(248, 249, 250, 0.8);
 }
 
 #header ul {
@@ -68,6 +74,7 @@ a {
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 #nav a:hover {
@@ -75,13 +82,10 @@ a {
     color: var(--primary-color);
 }
 
-
-
 /* OTHER SECTIONS */
-
 .section {
     padding: 4rem 2rem;
-    text-align: center; 
+    text-align: center;
 }
 
 .section-content {
@@ -93,7 +97,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#chi-siamo p, #servizi p, #dove-siamo p {  
+#chi-siamo p, #servizi p, #prenota p {
     margin-bottom: 1rem;
 }
 
@@ -101,14 +105,14 @@ a {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem; 
+    gap: 2rem;
 }
 
 .service-item {
-    text-align: center; 
-    padding: 2rem; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -122,14 +126,14 @@ a {
     color: var(--primary-color);
 }
 
-.service-item i {  
+.service-item i {
     font-size: 2rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
 .service-item p {
-    color: #555; 
+    color: #555;
 }
 
 /* CONTACT INFO */
@@ -145,15 +149,15 @@ a {
 /* HERO SECTION */
 #hero {
     background: url('images/hero-bg.jpg') center/cover no-repeat;
-    min-height: 60vh;
+    height: calc(100vh - 85px); /* Adjust height based on header height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--light-text);
-    position: relative; /* Needed for the overlay to position correctly */
+    position: relative;
     padding: 2rem;
-
+    overflow: hidden;
 }
 
 #hero .overlay {
@@ -163,15 +167,15 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1; /* Behind content */
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* In front of overlay */
+    z-index: 2;
 }
 
-.opening-hours { /*  Orario text */
+.opening-hours {
     margin-bottom: 0.5rem;
 }
 
@@ -183,9 +187,8 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    display: inline-block; /* To make it a block element */
-    margin-top: 1.5rem; /* Adds margin above the button */
-
+    display: inline-block;
+    margin-top: 1.5rem;
 }
 
 .btn:hover {
@@ -204,7 +207,7 @@ a {
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
@@ -228,23 +231,27 @@ a {
 
 .map-container iframe {
     display: block;
-    width: 100%; /* Make map responsive */
-    height: 450px; /* Fixed height for consistent display */
-    margin: 0 auto; /* Center the map horizontally */
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 
 @media screen and (max-width: 768px) {
-    /* Mobile Menu Styles */
+
     #header {
         background: transparent;
         box-shadow: none;
         padding: 1rem;
         position: relative;
         z-index: 1001;
-    }
+        transition: background-color 0.3s ease; /* Smooth transition */
 
+    }
+    #header.scrolled{ /* Change background on scroll for mobile */
+        background-color: rgba(248, 249, 250, 0.8);
+    }
     .menu-toggle {
         display: flex;
         position: absolute;
@@ -254,57 +261,70 @@ a {
     }
 
     #nav {
-        position: absolute;
+        position: fixed; /* Fixed position for overlay effect */
         top: 0;
-        right: 0;
+        left: 0; /* Cover the entire viewport */
         width: 100%;
+        height: 100%;
         background: var(--primary-color);
         text-align: center;
-        z-index: 1002; 
+        z-index: 1002;
         transform: translateY(-100%);
-        transition: transform 0.3s ease;
+        opacity: 0; /* Initially transparent */
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
     #nav.show {
         transform: translateY(0);
+        opacity: 1; /* Fully opaque when shown */
     }
-    .top-contacts{
-        display: none;
-    }
+
+
+
     #nav ul {
         flex-direction: column;
         padding: 1rem 0;
     }
+    .top-contacts {
+        display: none;
+    }
+
     #nav li {
         margin: 0.5rem 0;
     }
 
-    .opening-hours{
-        display: block;
-        font-size: 0.8rem;
-        margin-top: 0;
-        margin-bottom: 1rem;
+
+
+    #hero {
+        padding-top: 7rem; /* Adjust as needed to clear the header */
+        height: calc(100vh - 7rem - 2rem); /* hero height minus header height and padding*/
     }
     .hero-content h1 {
         font-size: 2rem;
-        margin-bottom: 0; /* Reduced margin to avoid extra space on mobile */
+        margin-bottom: 0;
     }
 
     .hero-content p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
     }
-    .top-bar {
-        display: none; /* Hide top bar on mobile */
+    .opening-hours {
+        display: block; /* Show orario on mobile */
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
     }
-    /* ... other mobile styles for hero, sections, etc. ... */
+
+    .top-bar {
+        display: none;
+    }
 
     .form-message {
         display: none;
     }
 
     .footer-content {
-        flex-direction: column;  /* Stack footer content vertically */
-        align-items: center;      /* Center footer content */
+        flex-direction: column;
+        align-items: center;
     }
 
     .map-container {
@@ -312,7 +332,7 @@ a {
     }
 
     .services-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 
     .contact-info {
@@ -326,5 +346,4 @@ a {
         font-size: 1.1rem;
         text-align: left;
     }
-
 }
