@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                // Chiudi il menu mobile dopo il click
                 if (window.innerWidth <= 768) {
                     nav.classList.remove('show');
                     mobileMenuToggle.setAttribute('aria-expanded', 'false');
