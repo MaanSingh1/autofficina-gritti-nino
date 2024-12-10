@@ -94,7 +94,7 @@ a:hover {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background: var(--dark-text);
+    background: #fff; /* Burger menu bianco */
     margin: 5px 0;
     transition: var(--transition);
 }
@@ -120,7 +120,7 @@ a:hover {
 
 /* HERO SECTION */
 #hero {
-    background: url('images/hero-bg.jpg') center/cover no-repeat; /* ottimizza immagine */
+    background: url('images/hero-bg.jpg') center/cover no-repeat; 
     height: calc(100vh - 85px);
     display: flex;
     align-items: center;
@@ -246,26 +246,7 @@ a:hover {
     font-weight: 500;
 }
 
-/* STICKY CTA BUTTON (MOBILE) */
-.sticky-cta {
-    display: none;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    z-index: 2000;
-    transition: var(--transition);
-}
-
-.sticky-cta:hover {
-    background: #e0a800;
-}
+/* Rimozione sticky CTA */
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
@@ -311,7 +292,7 @@ a:hover {
 
     #hero {
         padding-top: 7rem; 
-        height: auto; /* l'altezza si adatta per non tagliare contenuti su mobile */
+        height: auto;
     }
 
     .hero-content h1 {
@@ -330,9 +311,5 @@ a:hover {
 
     .contact-info p {
         font-size: 1.1rem;
-    }
-
-    .sticky-cta {
-        display: inline-block;
     }
 }
