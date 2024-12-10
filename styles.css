@@ -56,7 +56,7 @@ a:hover {
     align-items: center;
 }
 
-#header.scrolled{
+#header.scrolled {
     background-color: rgba(248, 249, 250, 0.8);
 }
 
@@ -91,12 +91,9 @@ a:hover {
     cursor: pointer;
 }
 
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: #fff; /* Burger menu bianco */
-    margin: 5px 0;
-    transition: var(--transition);
+.menu-toggle i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
 }
 
 /* SECTION */
@@ -120,7 +117,7 @@ a:hover {
 
 /* HERO SECTION */
 #hero {
-    background: url('images/hero-bg.jpg') center/cover no-repeat; 
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
     height: calc(100vh - 85px);
     display: flex;
     align-items: center;
@@ -245,8 +242,6 @@ a:hover {
     color: var(--secondary-color);
     font-weight: 500;
 }
-
-/* Rimozione sticky CTA */
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
