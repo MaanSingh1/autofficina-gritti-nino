@@ -89,11 +89,12 @@ a:hover {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.5rem; /* Increase clickable area */
 }
 
 .menu-toggle i {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+    font-size: 2rem; /* Bigger icon for better proportion */
+    color: var(--secondary-color); /* Same yellow as CTA button */
 }
 
 /* SECTION */
@@ -252,8 +253,8 @@ a:hover {
     .menu-toggle {
         display: flex;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 10px; /* Adjust positioning */
+        right: 10px; /* Adjust positioning */
         z-index: 1003;
     }
 
