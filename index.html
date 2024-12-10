@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Autofficina Gritti Nino - Revisione, manutenzione, diagnosi elettronica, gommista, climatizzazione a Cologno Al Serio (BG)">
     <title>Autofficina Gritti Nino</title>
+    <!-- Consiglio: comprimere/ottimizzare i CSS in produzione -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Icone FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <header id="header">
-        <div class="menu-toggle" id="mobile-menu-toggle">
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-        </div>
-        <nav id="nav">
+        </button>
+        <nav id="nav" aria-label="Navigazione principale">
             <ul>
                 <li><a href="#chi-siamo">Chi Siamo</a></li>
                 <li><a href="#servizi">Servizi</a></li>
-                <li><a href="#prenota">Dove Siamo / Prenota Ora</a></li>  </ul>
+                <li><a href="#prenota">Dove Siamo / Prenota Ora</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -33,7 +37,7 @@
             <h1>Autofficina Gritti Nino</h1>
             <p class="opening-hours">Lun-Ven 8:00-12:00 / 13:30-19:30</p>
             <p>Professionalità, Esperienza e Passione per la tua Auto</p>
-            <a class="btn" href="#prenota">Prenota un Appuntamento </a>
+            <a class="btn" href="#prenota">Prenota un Appuntamento</a>
         </div>
     </section>
 
@@ -41,8 +45,8 @@
         <div class="container">
             <div class="section-content">
                 <h2>Chi Siamo</h2>
-                <p>Fondata negli anni '90, l'Autofficina Gritti Nino a Cologno Al Serio (BG) è da sempre un punto di riferimento per gli automobilisti della zona. La nostra officina vanta una tradizione familiare e un team di professionisti altamente qualificati, in grado di garantire interventi rapidi, sicuri e svolti con cura artigianale.</p>
-                <p>Il nostro approccio si basa sulla trasparenza e sulla competenza: forniamo assistenza a 360°, dalla manutenzione ordinaria alle revisioni periodiche, dalla diagnosi elettronica ai servizi di gommista e climatizzazione. La fiducia dei nostri clienti è il nostro miglior biglietto da visita.</p>
+                <p>Siamo un’autofficina storica, attiva dagli anni ‘90 a Cologno Al Serio (BG). La nostra tradizione familiare ci permette di offrire interventi rapidi e sicuri, realizzati da professionisti altamente qualificati.</p>
+                <p>Forniamo assistenza a 360°: manutenzione ordinaria, revisioni periodiche, diagnosi elettronica, gommista e climatizzazione. La trasparenza e la competenza sono i nostri punti di forza, e la fiducia dei clienti è il nostro miglior biglietto da visita.</p>
             </div>
         </div>
     </section>
@@ -65,7 +69,7 @@
                     <div class="service-item">
                         <i class="fas fa-microchip"></i>
                         <h3>Diagnostica elettronica</h3>
-                        <p>Strumentazione all’avanguardia per identificare e risolvere ogni problema.</p>
+                        <p>Strumentazione avanzata per identificare e risolvere ogni problema.</p>
                     </div>
                     <div class="service-item">
                         <i class="fas fa-car-side"></i>
@@ -74,7 +78,7 @@
                     </div>
                     <div class="service-item">
                         <i class="fas fa-snowflake"></i>
-                        <h3>Impianti di climatizzazione</h3>
+                        <h3>Climatizzazione</h3>
                         <p>Installazione, controllo e ricarica dell'aria condizionata per un comfort ottimale.</p>
                     </div>
                 </div>
@@ -86,16 +90,16 @@
         <div class="container">
             <div class="section-content">
                 <h2>Contattaci per Prenotare / Dove Siamo</h2>
-                <p>Potete contattarci tramite i seguenti recapiti:</p>
+                <p>Potete contattarci ai seguenti recapiti:</p>
 
                 <div class="contact-info">
                     <p><i class="fas fa-phone"></i> <a href="tel:3472930537">347 2930537</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:gritti66@libero.it">gritti66@libero.it</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Via Roncalli 1/A, 24055, Cologno Al Serio (BG)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/... " target="_blank" rel="noopener">Via Roncalli 1/A, 24055, Cologno Al Serio (BG)</a></p>
                     <p><i class="far fa-clock"></i> Orari: Lun-Ven 8:00-12:00 / 13:30-19:30</p> 
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.037878758324!2d9.705476376316677!3d45.509388938943454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47814e75b7d7b747%3A0x5f05590b851d8c3b!2sVia%20Papa%20Giovanni%20XXIII%2C%201A%2C%2024055%20Cologno%20al%20Serio%20BG!5e0!3m2!1sit!2sit!4v1709637415583!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -111,10 +115,13 @@
             </div>
             <div class="footer-credits">
                 <p>© 2024 Autofficina Gritti Nino</p>
-                <p><a href="https://man-preet-singh.com/" target="_blank">creato da Manpreet Singh</a></p>
+                <p><a href="https://man-preet-singh.com/" target="_blank" rel="noopener">Creato da Manpreet Singh</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- CTA sticky su mobile -->
+    <a class="sticky-cta" href="#prenota">Prenota Ora</a>
 
     <script src="script.js"></script>
 </body>
